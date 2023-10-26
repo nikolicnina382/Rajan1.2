@@ -1,0 +1,56 @@
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+<h1 class="text-light"><a routerLink="/pocetna"><span>RAJAN d.o.o</span></a></h1>
+</div>
+
+<nav id="navbar" class="site-nav" [ngClass]="{ 'site-nav--open': isMenuOpen }">
+<ul>
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/pocetna"> <i class="fa-brands fa-buffer"></i>Pocetna </a>
+
+    </li>
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/about"> <i class="fa fa-home site-nav--icon"></i>About </a>
+
+    </li>
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/galerija"> <i class="fa fa-info site-nav--icon"></i>Galerija </a>
+
+    </li>
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/ponuda"> <i class="fa-brands fa-buffer"></i>Ponuda </a>
+
+    </li>
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/proces"> <i class="fa fa-info site-nav--icon"></i>Proces </a>
+
+    </li>
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/reference"> <i class="fa-brands fa-buffer"></i>Reference </a>
+
+    </li>
+
+    <li>
+        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/contact"> <i class="fa fa-envelope site-nav--icon"></i>Contact </a>
+
+    </li>
+
+    <li>
+        <a class="nav__single-link" routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/auth"> <i class="fa fa-info site-nav--icon"></i>auth </a>
+
+    </li></ul>
+
+</nav>
+<div class="menu-toggle"  (click)="toggleMenu()">
+    <div  class="hamburger"></div>
+</div>
+</div>
+</header>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+
+
+

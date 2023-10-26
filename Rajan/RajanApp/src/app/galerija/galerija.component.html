@@ -1,0 +1,76 @@
+
+ <div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Galerija nasih radova</h3>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container" (click)="zoomImage()">
+      <div class="w3-display-topleft w3-black w3-padding"> House</div>
+      <a target="_blank" href="https://picsum.photos/200">
+
+      <img *ngIf="!zoomed" src="https://picsum.photos/200" alt="House" height="240px" style="width:100%"> </a>
+
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <div class="w3-display-topleft w3-black w3-padding">House</div>
+      <!-- <img *ngIf="zoomed" src="https://picsum.photos/200" alt="Slika" class="fullscreen-image" /> -->
+      <a target="_blank" href="https://picsum.photos/200">
+
+      <img *ngIf="!zoomed" src="https://picsum.photos/200" alt="House" height="240px" style="width:100%"></a>
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <!-- <div class="w3-display-topleft w3-black w3-padding">Tango KG</div> -->
+      <!-- <img *ngIf="zoomed" src="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-tango.jpg" alt="Slika" class="fullscreen-image" /> -->
+      <a target="_blank" href="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-tango.jpg">
+      <img *ngIf="!zoomed" src="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-tango.jpg" alt="House" height="240px" style="width:100%"></a>
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <!-- <div class="w3-display-topleft w3-black w3-padding">Kopaonik</div> -->
+      <!-- <img *ngIf="zoomed" src="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-hoteli_16.jpg" alt="Slika" class="fullscreen-image" /> -->
+      <a target="_blank" href="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-hoteli_16.jpg">
+      <img *ngIf="!zoomed" src="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-hoteli_16.jpg" alt="House" height="240px" style="width:100%"></a>
+    </div>
+  </div>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <!-- <div class="w3-display-topleft w3-black w3-padding">Kopaonik</div> -->
+      <!-- <img *ngIf="zoomed" src="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-razno_04.jpg" alt="Slika" class="fullscreen-image" /> -->
+      <a target="_blank" href="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-razno_04.jpg">
+      <img *ngIf="!zoomed" src="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-razno_04.jpg" alt="House" height="240px" style="width:100%"></a>
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <!-- <div class="w3-display-topleft w3-black w3-padding">Kopaonik</div> -->
+      <!-- <img *ngIf="zoomed" src="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-hoteli_16.jpg" alt="Slika" class="fullscreen-image" /> -->
+      <a target="_blank" href="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-hoteli_16.jpg">
+      <img *ngIf="!zoomed" src="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-hoteli_16.jpg" alt="House" height="240px" style="width:100%"></a>
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <!-- <div class="w3-display-topleft w3-black w3-padding">Kopaonik</div> -->
+      <!-- <img *ngIf="zoomed" src="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-proizvodnja_11.jpg" alt="Slika" class="fullscreen-image" /> -->
+      <a target="_blank" href="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-proizvodnja_11.jpg">
+      <img *ngIf="!zoomed" src="http://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-proizvodnja_11.jpg" alt="House" height="240px" style="width:100%"></a>
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container"  (click)="zoomImage()">
+      <!-- <div class="w3-display-topleft w3-black w3-padding">Kopaonik</div> -->
+      <img *ngIf="zoomed" src="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-razno_08.jpg" alt="Slika" class="fullscreen-image" />
+      <img *ngIf="!zoomed" src="https://www.rajanwood.com/public/img/rajan-doo-impregnacija-drveta-large-razno_08.jpg" alt="House" height="240px" style="width:100%">
+    </div>
+  </div>
+</div>
+
