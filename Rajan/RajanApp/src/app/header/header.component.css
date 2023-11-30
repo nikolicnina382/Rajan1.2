@@ -3,7 +3,7 @@
 }
 
 #header.header-transparent {
-  background: #6d341e;
+  background: #854830;
   border-radius: 0 0 50% 50%;
 
 }
@@ -12,7 +12,9 @@
   margin: 0;
   font-weight: 400;
   letter-spacing: 3px;
-  text-transform: uppercase;}
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
 
 
 
@@ -28,7 +30,7 @@
   top: 100%;
   right: 0%;
   clip-path: circle(0px at top right);
-  transition: clip-path ease-in-out 500ms;
+  /* transition: clip-path ease-in-out 500ms; */
 }
 
 .site-nav--open{   
@@ -44,7 +46,7 @@
   
   color:#888888;
   display: block;
-  padding: 2em 6em 2em 2em; 
+  padding: 1em 4em 1em 1em; 
   border-bottom: 1px solid #545454;
 }
 
@@ -53,7 +55,10 @@
   text-decoration: none;
   font-family: Quicksand,'sans-serif';
   font-size: 20px;
- font-weight: 400;
+  font-weight: 400;
+}
+.site-nav a:hover {
+  color: #e26e41;
 }
 
 
@@ -71,13 +76,13 @@
 padding: 1em;
 position: absolute;
 right: 0.5em;
-top:1.5em;
+/* top:1.5em; */
 
 }
 .hamburger, .hamburger::before, .hamburger::after{
   content: '';
   display: block;
-  background: #85ff00;
+  background: #ffffff;
   height: 3px;
   width: 1.5em;
   border-radius: 3px;
@@ -118,11 +123,12 @@ top:1.5em;
   position: absolute;
   left: 50%;
   top: 0;
-  width: 130%;
+  width: 115vw;
   height: 94%;
-  background-image:  url('./old-hardwood-plank-tree-trunk-backdrop-generated-by-ai.jpg');
+  background-size: cover;
+  background-image:  url('./nina-header.jpg');
   z-index: 0;
-  border-radius: 0 0 50% 50%;
+  border-radius: 0 0 50% 50%; 
   transform: translateX(-50%) rotate(0deg);
 }
 
@@ -131,17 +137,17 @@ top:1.5em;
   position: absolute;
   left: 50%;
   top: 0;
-  width: 130%;
+  width: 115vw;
   height: 91%;
-  background: #6d341e;
-  opacity: 0.5;
+  background: rgba(109, 52, 30, 0.5);
+  background-size: cover;
   z-index: 0;
   border-radius: 0 0 50% 50%;
   transform: translateX(-50%) translateY(18px) rotate(2deg);
 }
 
 
-@media (min-width:768px){
+@media (min-width:913px){
   .menu-toggle{
     display: none;
   }

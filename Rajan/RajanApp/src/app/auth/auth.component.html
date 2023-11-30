@@ -4,7 +4,7 @@
       <p>{{ error }}</p>
     </div>
   
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" style="margin-left: 20px;   ">
       <div class="form-group">
         <label for="email">E-Mail</label>
         <input

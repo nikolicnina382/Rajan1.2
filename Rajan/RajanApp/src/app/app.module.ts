@@ -11,6 +11,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthComponent } from './auth/auth.component';
 import { AuthInterceptorService } from '../app/auth/auth-interceptor.service';
+import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/compat/storage';
+import {AngularFireModule} from '@angular/fire/compat'
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 
 import { AppComponent } from './app.component';
@@ -24,6 +27,9 @@ import { GalerijaComponent } from './galerija/galerija.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddComponent } from './add/add.component';
 import { PocetnaComponent } from './pocetna/pocetna.component';
+import { AddPicComponent } from './add-pic/add-pic.component';
+import { AddLiComponent } from './add-li/add-li.component';
+import { environment } from 'src/environments/environment.development';
 
 @NgModule({
   declarations: [
@@ -39,7 +45,9 @@ import { PocetnaComponent } from './pocetna/pocetna.component';
     AuthComponent,
     FooterComponent,
     AddComponent,
-    PocetnaComponent
+    PocetnaComponent,
+    AddPicComponent,
+    AddLiComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +59,12 @@ import { PocetnaComponent } from './pocetna/pocetna.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule,
+    AngularFireStorageModule,
+    MatSnackBarModule
+    
     
 
   ],

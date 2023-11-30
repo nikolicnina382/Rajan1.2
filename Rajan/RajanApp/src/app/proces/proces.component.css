@@ -26,7 +26,7 @@
  
 .about-info p {
     font-size: 1.1rem;
-    /* margin: 0 2rem; */
+    margin-bottom: 2rem;
     text-align: justify;
 }
 .container{
@@ -45,7 +45,13 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 2rem 2rem;
+    
 }
+h4{
+    margin-bottom: 1rem;
+}
+
 
 
 .video-container {

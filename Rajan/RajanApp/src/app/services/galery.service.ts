@@ -1,25 +1,27 @@
-import { HttpClient, HttpEventType, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { PIC } from '../pic';
+import { Observable, Subject, catchError, map, tap, throwError } from 'rxjs';
+import { HttpClient, HttpEventType, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { catchError, map, Observable, Subject, tap, throwError } from 'rxjs';
-import { TODO } from '../todo';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
-  currentPost!: TODO;
+export class GaleryService {
 
-  items!: Observable<TODO[]>;
+  
+  currentPost!: PIC;
+
+  items!: Observable<PIC[]>;
     error = new Subject<string>();
   
     constructor(private http: HttpClient, private router:Router) {}
   
-    createAndStorePost(id:string, name:any, grad: any, slika:any ) {
-      const postData: TODO = {id:id, name:name, grad:grad, slika:slika };
+    createAndStorePost(id:string, slika:any ) {
+      const postData: PIC = {id:id, slika:slika };
       this.http
         .post<{ name: string }>(
-          'https://rajanwood-c82cc-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
+          'https://rajanwood-c82cc-default-rtdb.europe-west1.firebasedatabase.app/galerija.json',
           postData,
           {
             observe: 'response',
@@ -37,8 +39,8 @@ export class DataService {
       searchParams = searchParams.append('print', 'pretty');
       searchParams = searchParams.append('custom', 'key');
       return this.http
-        .get<{ [key: string]: TODO }>(
-          'https://rajanwood-c82cc-default-rtdb.europe-west1.firebasedatabase.app/posts.json',
+        .get<{ [key: string]: PIC }>(
+          'https://rajanwood-c82cc-default-rtdb.europe-west1.firebasedatabase.app/galerija.json',
           {
             headers: new HttpHeaders({ 'Custom-Header': 'Hello' }),
             params: searchParams,
@@ -48,7 +50,7 @@ export class DataService {
         .pipe(
           map((responseData) => {
             console.log('ovo je response data iz servisa', responseData);
-            const postsArray: TODO[] = [];
+            const postsArray: PIC[] = [];
             for (const key in responseData) {
               if (responseData.hasOwnProperty(key)) {
                 postsArray.push({ ...responseData[key], id: key });
@@ -65,7 +67,7 @@ export class DataService {
   
     deletePosts() {
       return this.http
-        .delete('https://rajanwood-c82cc-default-rtdb.europe-west1.firebasedatabase.app/posts.json', {
+        .delete('https://rajanwood-c82cc-default-rtdb.europe-west1.firebasedatabase.app/galerija.json', {
           observe: 'events',
           responseType: 'text',
         })
@@ -82,5 +84,4 @@ export class DataService {
     }
 
     
-
 }

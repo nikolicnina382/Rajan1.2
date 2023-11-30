@@ -10,6 +10,8 @@ import { AddComponent } from "./add/add.component";
 import { AuthComponent } from "./auth/auth.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { PocetnaComponent } from "./pocetna/pocetna.component";
+import { AddPicComponent } from "./add-pic/add-pic.component";
+import { AddLiComponent } from "./add-li/add-li.component";
 
 
 const routes: Routes = [
@@ -18,23 +20,21 @@ const routes: Routes = [
     {
       path: 'add',
       component: AddComponent,
-      canActivate: [AuthGuard],
-      // children: [
-      //   {
-      //     path: ':id',
-      //     component: DetailComponent,
-          
-      //   },
-      //   {
-      //     path: ':id',
-      //     component: EditComponent,
-  
-      //   }
-  
-      // ]
+      canActivate: [AuthGuard]
+      
     },
-    // {path:'list/:id',component: DetailComponent},
-    // {path:'list/edit/:id',component: EditComponent},
+    {
+      path: 'addPic',
+      component: AddPicComponent,
+      canActivate: [AuthGuard]
+      
+    }, {
+      path: 'addLi',
+      component: AddLiComponent,
+      canActivate: [AuthGuard]
+      
+    },
+
     { path: 'contact', component: ContactComponent },
     { path: 'about', component: AboutComponent },
     { path: 'galerija', component: GalerijaComponent },
@@ -42,8 +42,10 @@ const routes: Routes = [
     { path: 'proces', component: ProcesComponent },
     { path: 'reference', component: ReferenceComponent },
     { path: 'auth', component: AuthComponent },
-    { path: 'add', component: AddComponent },
+    // { path: 'add', component: AddComponent },
     { path: 'pocetna', component: PocetnaComponent },
+    // { path: 'addPic', component: AddPicComponent },
+    // { path: 'addLi', component: AddLiComponent },
 
  
       {path: '**', component: PocetnaComponent }

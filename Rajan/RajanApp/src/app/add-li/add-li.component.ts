@@ -1,42 +1,30 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { TODO } from '../todo';
+import { Ponuda } from '../ponuda';
 import { Subscription } from 'rxjs';
-import { DataService } from '../services/data.service';
+import { PonudaService } from '../services/ponuda.service';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
-  selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  selector: 'app-add-li',
+  templateUrl: './add-li.component.html',
+  styleUrls: ['./add-li.component.css']
 })
-export class AddComponent implements OnInit, OnDestroy{
+export class AddLiComponent implements OnInit, OnDestroy{
 
   
-  loadedPosts: TODO[] = [];
+  loadedPosts: Ponuda[] = [];
   isFetching = false;
   error: any;
   private errorSub!: Subscription;
 
-  isAuthenticated = false;
-  private userSub!: Subscription;
-
-  constructor(private todoService: DataService, private http: HttpClient, private authService: AuthService){}
+  constructor(private todoService: PonudaService, private http: HttpClient, private authService: AuthService){}
 
 
   ngOnInit(): void {
-
-    
-    this.userSub = this.authService.user.subscribe(user => {
-         this.isAuthenticated = !!user;
-        console.log(!user);
-          console.log(!!user);
-        });
-
     this.errorSub = this.todoService.error.subscribe((errorMessage)=>{
       this.error = errorMessage ? errorMessage :null;
     });
-
     this.isFetching =true;
     this.todoService.fetchPosts().subscribe({
       next: (posts) => {
@@ -50,10 +38,15 @@ export class AddComponent implements OnInit, OnDestroy{
       },
     });
 
+    this.userSub = this.authService.user.subscribe(user => {
+         this.isAuthenticated = !!user;
+        console.log(!user);
+          console.log(!!user);
+        });
   }
 
-  onCreatePost(postData: TODO) {
-    this.todoService.createAndStorePost(postData.id, postData.name ,postData.grad, postData.slika);
+  onCreatePost(postData: Ponuda) {
+    this.todoService.createAndStorePost(postData.id, postData.list );
   } 
 
 
@@ -62,6 +55,10 @@ export class AddComponent implements OnInit, OnDestroy{
       this.loadedPosts = [];
     });
   }
+
+  isAuthenticated = false;
+  private userSub!: Subscription;
+
 
   onLogout() {
     this.authService.logout();

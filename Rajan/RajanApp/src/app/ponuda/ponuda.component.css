@@ -1,48 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+h4 {
+	position: relative;
+	
+	margin: 0;
+	
+	color: #6d341e;
+	margin-bottom: 20px;
+	text-align: center;
+	overflow: hidden;
+    margin-top: 20px;
 }
 
 
-.ponuda {
- 
-    padding: 100px 0 20px 0;
-    /* text-align: center; */
-}
- 
-.ponuda h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
- 
-.ponuda p {
-    font-size: 1rem;
-    color: #323030;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
 
-/* CSS for the list */
+
+
 ul {
-    list-style-type: none;
-    padding: 0;
+	position: relative;
+	width: 100%;
+	max-height: 230px;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding-bottom: 15px;
 }
 
-li {
-    margin: 10px 0;
-    padding: 10px;
-    /* background-color: #f5f5f5; */
-    border-radius: 3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
- 
+ul li {
+	position: relative;
+	color: #000000;
+	padding: 10px 50px 10px 12px;
 
- 
-@media (max-width: 768px) {
-   
- 
-    
+	font-size: 12pt;
+	line-height: 24pt;
+	font-weight: 500;
+	margin: 0px 60px 0px 0px;
+	
+	transition: all 0.1s linear;
 }
+
+
+
+
+
+ul li:hover {
+	background: #ccc;
+	color: black;
+	cursor: pointer;
+	text-shadow: none;
+	transition: all 0.1s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

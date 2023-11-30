@@ -1,14 +1,12 @@
 <div  class="d-flex justify-content-center flex-wrap my-5">
       <div *ngFor="let pd of loadedPosts">
-       <div class="card my-3">
-          <img src="{{ pd.slika }}" alt="Responsive Image" width="447" height="300">
+       <div class="card my-3 w3">
+          <img src="{{ pd.slika }}" alt="Responsive Image" width="347" height="300">
           <div class="card-content">
               <h3>{{ pd.name }}</h3>
               <p>{{ pd.grad}}</p>
           </div>
       </div>
-
-
 
       </div>
     </div>
