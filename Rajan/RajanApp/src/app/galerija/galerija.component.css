@@ -12,7 +12,10 @@ h3{
     clear:both
   }
   
-  
+  .content,.auto{
+    margin-left:auto;
+    margin-right:auto
+}
   
   .w3-col{float:left;width:100%}
   

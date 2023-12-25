@@ -16,7 +16,6 @@ import { AddLiComponent } from "./add-li/add-li.component";
 
 const routes: Routes = [
 
-  
     {
       path: 'add',
       component: AddComponent,
@@ -42,13 +41,8 @@ const routes: Routes = [
     { path: 'proces', component: ProcesComponent },
     { path: 'reference', component: ReferenceComponent },
     { path: 'auth', component: AuthComponent },
-    // { path: 'add', component: AddComponent },
     { path: 'pocetna', component: PocetnaComponent },
-    // { path: 'addPic', component: AddPicComponent },
-    // { path: 'addLi', component: AddLiComponent },
-
- 
-      {path: '**', component: PocetnaComponent }
+    {path: '**', component: PocetnaComponent }
     ];
     
   

@@ -1,58 +1,61 @@
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
 
-      <div class="logo">
-<h1 class="text-light"><a routerLink="/pocetna"><span>NNWOOD </span></a></h1>
-</div>
+        <div class="logo">
+            <h1 class="text-light"><a routerLink="/pocetna"><span>NNWOOD </span></a></h1>
+        </div>
 
-<nav id="navbar" class="site-nav" [ngClass]="{ 'site-nav--open': isMenuOpen }">
-<ul>
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/pocetna">Početna </a>
+        <nav id="navbar" class="site-nav" [ngClass]="{ 'site-nav--open': isMenuOpen }">
+            <ul>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" 
+                        routerLink="/pocetna">Početna </a>
+                </li>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active"  routerLink="/about">O
+                        nama</a>
+                </li>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" 
+                        routerLink="/galerija">Galerija </a>
+                </li>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" 
+                        routerLink="/ponuda">Ponuda </a>
+                </li>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" 
+                        routerLink="/proces">Proces </a>
+                </li>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" 
+                        routerLink="/reference">Reference </a>
 
-    </li>
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/about">O nama</a>
+                </li>
 
-    </li>
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/galerija">Galerija </a>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" 
+                        routerLink="/contact">Kontakt</a>
 
-    </li>
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/ponuda">Ponuda </a>
+                </li>
 
-    </li>
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/proces">Proces </a>
+                <li>
+                    <a class="nav__single-link" routerLinkActive="active" routerLink="/auth"><i
+                            class="fa fa-user-circle-o" style="width:25px"></i> </a>
 
-    </li>
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/reference">Reference </a>
+                </li>
+            </ul>
 
-    </li>
 
-    <li>
-        <a class="nav__single-link"  routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/contact">Kontakt</a>
-
-    </li>
-
-    <li>
-        <a class="nav__single-link" routerLinkActive="active" *ngIf="!isAuthenticated" routerLink="/auth"><i class="fa fa-user-circle-o" style="width:25px"></i> </a>
-
-    </li></ul>
-   
-
-</nav>
-<div class="menu-toggle"  (click)="toggleMenu()">
-    <div  class="hamburger"></div>
-</div>
-</div>
+        </nav>
+        <div class="menu-toggle" (click)="toggleMenu()">
+            <div class="hamburger"></div>
+        </div>
+    </div>
 </header>
 
 <!-- ======= Hero Section ======= -->
-<section id="hero"> 
+<section id="hero">

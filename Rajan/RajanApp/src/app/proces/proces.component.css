@@ -17,7 +17,10 @@
     color: #323030;
     margin: 0 auto;
 }
- 
+.content,.auto{
+    margin-left:auto;
+    margin-right:auto
+}
 .about-info {
     margin: 2rem 2rem;
     display: flex;   

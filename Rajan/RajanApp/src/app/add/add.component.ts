@@ -24,9 +24,7 @@ export class AddComponent implements OnInit, OnDestroy{
   constructor(private todoService: DataService, private http: HttpClient, private authService: AuthService){}
 
 
-  ngOnInit(): void {
-
-    
+  ngOnInit(): void { 
     this.userSub = this.authService.user.subscribe(user => {
          this.isAuthenticated = !!user;
         console.log(!user);
